@@ -2,7 +2,8 @@ var inquirer = require("inquirer");
 var fs = require('fs');
 
 // array of questions for user
-const questions = [
+// const questions 
+inquirer.prompt([
     {
         type: "input",
         name: "title",
@@ -11,30 +12,57 @@ const questions = [
       {
         type: "input",
         name: "description",
-        message: "What is the description of your project.?"
+        message: "What is the description of your project?"
       },
       {
         type: "checkbox",
-        message: "What languages do you know?",
-        name: "stack",
+        message: "What do you want in your table of contents?",
+        name: "contents",
         choices: [
-          "HTML", 
-          "CSS", 
-          "JavaScript", 
-          "MySQL"
+          "Title", 
+          "Description", 
+          "Table of Contents", 
+          "Installation",
+          "Usage",
+          "License",
+          "Contributions",
+          "Tests",
+          "Questions"
+        ]
+      },
+      {
+        type: "input",
+        name: "installation",
+        message: "How should your project be installed?"
+      },
+      {
+        type: "checkbox",
+        message: "What licenses do you want to use?",
+        name: "contents",
+        choices: [
+          "Title", 
+          "Description", 
+          "Table of Contents", 
+          "Installation",
+          "Usage",
+          "License",
+          "Contributions",
+          "Tests",
+          "Questions"
         ]
       },
       {
         type: "list",
         message: "What is your preferred method of communication?",
-        name: "contact",
+        name: "license",
         choices: [
-          "email",
-          "phone",
-          "telekinesis"
+          "MIT",
+          "GNU GPLv3",
+          "ISC",
+          "Apache 2.0",
         ]
       }
-    ].then(function(data) { })
+    ]).then(function(data) { })
     
 
     // title, Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
