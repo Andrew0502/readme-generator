@@ -61,7 +61,12 @@ inquirer.prompt([
           "ISC",
           "Apache 2.0",
         ]
-      }
+      },
+      {
+        type: "input",
+        name: "Contribution",
+        message: "How should your project be installed?"
+      },
     ]).then(function(data) { })
     
 
