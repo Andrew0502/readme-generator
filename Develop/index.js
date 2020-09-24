@@ -1,8 +1,9 @@
 var inquirer = require("inquirer");
 var fs = require('fs');
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-// const questions 
+// const questions =
 inquirer.prompt([
     {
         type: "input",
@@ -36,24 +37,13 @@ inquirer.prompt([
         message: "How should your project be installed?"
       },
       {
-        type: "checkbox",
-        message: "What licenses do you want to use?",
-        name: "contents",
-        choices: [
-          "Title", 
-          "Description", 
-          "Table of Contents", 
-          "Installation",
-          "Usage",
-          "License",
-          "Contributions",
-          "Tests",
-          "Questions"
-        ]
+        type: "input",
+        name: "usage",
+        message: "How should your project be used?"
       },
       {
         type: "list",
-        message: "What is your preferred method of communication?",
+        message: "What license(s) are you using in this project?",
         name: "license",
         choices: [
           "MIT",
@@ -65,22 +55,38 @@ inquirer.prompt([
       {
         type: "input",
         name: "Contribution",
-        message: "How should your project be installed?"
+        message: "Who contributed to this project?"
       },
-    ]).then(function(data) { })
-    
+      {
+        type: "input",
+        name: "tests",
+        message: "What tests could someone run on this project?"
+      },
+      {
+        type: "input",
+        name: "questions",
+        message: "What questions do you have for this project?"
+      },
 
-    // title, Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+
+    ]).then(function(data) { 
+        const markDown = generateMarkdown(response);
+        writeToFile("ReadMe2.md", markDown)
+    });
 
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeToFile(fileName, data, function(error){
+        if (error) throw error
+    })
 }
 
 // function to initialize program
 function init() {
 
 }
+
 
 // function call to initialize program
 init();
