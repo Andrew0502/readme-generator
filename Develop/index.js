@@ -39,22 +39,19 @@ function init() {
             name: "description",
             message: questions[1]
           },
-          {
-            type: "checkbox",
-            message: questions[2],
-            name: "contents",
-            choices: [
-              "Title", 
-              "Description", 
-              "Table of Contents", 
-              "Installation",
-              "Usage",
-              "License",
-              "Contributions",
-              "Tests",
-              "Questions"
-            ]
-          },
+          // {
+          //   type: "checkbox",
+          //   message: questions[2],
+          //   name: "contents",
+          //   choices: [ 
+          //     "Installation",
+          //     "Usage",
+          //     "License",
+          //     "Contributions",
+          //     "Tests",
+          //     "Questions"
+          //   ]
+          // },
           {
             type: "input",
             name: "installation",
@@ -66,7 +63,7 @@ function init() {
             message: questions[4]
           },
           {
-            type: "list",
+            type: "checkbox",
             message: questions[5],
             name: "license",
             choices: [
