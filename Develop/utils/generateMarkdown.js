@@ -24,25 +24,20 @@ function generateMarkdown(data) {
 ## Description
   ${data.description}
 ## Table of Contents
-${data.contents}
+  ${data.contents}
 ## Installation
-${data.installation}
-    ${installationText}
+  ${data.installation}
 ## Usage
-${data.usage}
-    ${usageText}
+  ${data.usage}
 ## Licenses
-${data.license}
-    ${licenseText}
+  ${data.license}
+  ${licenseText}
 ## Contributions
-${data.contribution}
-    ${contributionText}  
+  ${data.contribution}
 ## Tests
-${data.tests}
-    ${testsText}
+  ${data.tests}
 ## Questions
-${data.questions}
-    ${questionsText}
+  ${data.questions}
 `;
 }
 

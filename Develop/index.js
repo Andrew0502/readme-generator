@@ -1,18 +1,21 @@
 var inquirer = require("inquirer");
 var fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown");
+const util = require("util");
+
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
-    "What is the title of your project?", //questions[1]
-    "What is the description of your project?", //questions[2]
-    "What do you want in your table of contents?", //questions[3]
-    "How should your project be installed?", //questions[4]
-    "How should your project be used?", //questions[5]
-    "What license(s) are you using in this project?", //questions[6]
-    "Who contributed to this project?", //questions[7]
-    "What tests could someone run on this project?", //questions[8]
-    "What questions do you have for this project?" // //questions[9]
+    "What is the title of your project?", //questions[0]
+    "What is the description of your project?", //questions[1]
+    "What do you want in your table of contents?", //questions[2]
+    "How should your project be installed?", //questions[3]
+    "How should your project be used?", //questions[4]
+    "What license are you using in this project?", //questions[5]
+    "Who contributed to this project?", //questions[6]
+    "What tests could someone run on this project?", //questions[7]
+    "What questions do you have for this project?" // //questions[8]
 ];
 
 
@@ -25,20 +28,20 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-    inquirer.prompt([
+    return inquirer.prompt([
         {
             type: "input",
             name: "title",
-            message: questions[1]
+            message: questions[0]
           },
           {
             type: "input",
             name: "description",
-            message: questions[2]
+            message: questions[1]
           },
           {
             type: "checkbox",
-            message: questions[3],
+            message: questions[2],
             name: "contents",
             choices: [
               "Title", 
@@ -55,16 +58,16 @@ function init() {
           {
             type: "input",
             name: "installation",
-            message: questions[4]
+            message: questions[3]
           },
           {
             type: "input",
             name: "usage",
-            message: questions[5]
+            message: questions[4]
           },
           {
             type: "list",
-            message: questions[6],
+            message: questions[5],
             name: "license",
             choices: [
               "MIT",
@@ -76,23 +79,30 @@ function init() {
           {
             type: "input",
             name: "Contribution",
-            message: questions[7]
+            message: questions[6]
           },
           {
             type: "input",
             name: "tests",
-            message: questions[8]
+            message: questions[7]
           },
           {
             type: "input",
             name: "questions",
-            message: questions[9]
+            message: questions[8]
           },
     
         ]).then(function(data) { 
-            console.log(responses);
-            const markDown = generateMarkdown(response);
-            writeToFile("generatedReadme.md", markDown)
+            const markDown = generateMarkdown(data);
+
+            return writeFileAsync("generatedReadme.md", markDown)
+            
+        })
+        .then(function() {
+          console.log("Successfully wrote to generatedReadme.md");
+        })
+        .catch(function(err) {
+          console.log(err);
         });
 }
 
