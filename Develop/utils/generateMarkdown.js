@@ -2,24 +2,6 @@
 function generateMarkdown(data) {
   
   let licenseText = "";
-  
-  
-  // if(data.license.includes("MIT")){
-  //   mitText = "This application is licensed under the MIT license..."
-  //   licenseText.appendChild(mitText);
-  // } 
-  // if(data.license.includes("GNU GPLv3")) {
-  //   gnuText = "This application is licensed under the GNU GPLv3 license..."
-  //   licenseText.appendChild(gnuText);
-  // } 
-  // if(data.license.includes("ISC")) {
-  //   iscText = "This application is licensed under the ISC license..."
-  //   licenseText.appendChild(iscText)
-  // } 
-  // if(data.license.includes("Apache 2.0")) {
-  //   apacheText = "This application is licensed under the Apache License 2.0 license..."
-  //   licenseText.appendChild(apacheText)
-  // }
 
   return `# ${data.title}
 
