@@ -15,7 +15,8 @@ const questions = [
     "What license are you using in this project?", //questions[5]
     "How could someone contribute to this project?", //questions[6]
     "What tests could someone run on this project?", //questions[7]
-    "Please enter your email and GitHub usernames." // //questions[8]
+    "Please enter your email.", //questions[8]
+    "please enter your GitHub username." //question[9]
 ];
 
 
@@ -85,9 +86,14 @@ function init() {
           },
           {
             type: "input",
-            name: "questions",
+            name: "email",
             message: questions[8]
           },
+          {
+            type: "input",
+            name: "github",
+            message: questions[9]
+          }
     
         ]).then(function(data) { 
             const markDown = generateMarkdown(data);

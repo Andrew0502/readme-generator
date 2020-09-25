@@ -1,5 +1,4 @@
-
-# Test
+# readme-generator
 
   ![MIT License Badge](https://img.shields.io/badge/license-MIT-blue)
   ![GNU License Badge](https://img.shields.io/badge/license-GNU_GPLv3-blue)
@@ -34,4 +33,4 @@
 ## Tests
    
 
-## Questions# readme-generator
+## Questions

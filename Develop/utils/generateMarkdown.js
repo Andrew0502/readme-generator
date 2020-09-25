@@ -25,8 +25,8 @@ function generateMarkdown(data) {
 
   ![MIT License Badge](https://img.shields.io/badge/license-MIT-blue)
   ![GNU License Badge](https://img.shields.io/badge/license-GNU_GPLv3-blue)
-  ![MIT License Badge](https://img.shields.io/badge/license-ISC-blue)
-  ![MIT License Badge](https://img.shields.io/badge/license-Apache_2.0-blue)
+  ![ISC License Badge](https://img.shields.io/badge/license-ISC-blue)
+  ![Apache License Badge](https://img.shields.io/badge/license-Apache_2.0-blue)
 
   Delete Badges as appropriate.
 
@@ -59,7 +59,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
 ## Questions
-  ${data.questions}
+  Please forward any questions to ${data.email}. Please refer to the code for this project and others at ${data.github}.
 
 `;
 }
