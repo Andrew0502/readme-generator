@@ -6,7 +6,7 @@
   ![MIT License Badge](https://img.shields.io/badge/license-Apache_2.0-blue)
 
 ## Description
-  This application is a brief professional README generator
+  This application is a brief professional README generator. It is created using Node.js and npm inquirer. The program is run via the CLI and takes user input to generate a professional README. 
 
 ## Table of Contents
 
@@ -18,17 +18,17 @@
   * [Questions](#Questions)
 
 ## Installation
-  test
+  Download ont your machine, make sure you have npm inquirer installed.
 
 ## Usage
-  test
+  Run via command line using "node index.js".
 
 ## Licenses
   This project is licensed under the MIT,GNU GPLv3,ISC,Apache 2.0 license(s). for more information regarding licensing feel free to visit
   [choose a license](https://choosealicense.com/)
 
 ## Contributions
-  test
+  Please refer to email under the contacts heading to request editing permission.
 
 ## Tests
    
