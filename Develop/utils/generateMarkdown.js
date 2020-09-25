@@ -59,7 +59,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
 ## Questions
-  Please forward any questions to ${data.email}. Please refer to the code for this project and others at ${data.github}.
+  Please forward any questions to [${data.email}](${data.email}). Please refer to the code for this project and others at [${data.github}](${data.github}).
 
 `;
 }

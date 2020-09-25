@@ -6,7 +6,7 @@
   ![MIT License Badge](https://img.shields.io/badge/license-Apache_2.0-blue)
 
 ## Description
-  test
+  This application is a brief professional README generator
 
 ## Table of Contents
 
@@ -34,3 +34,4 @@
    
 
 ## Questions
+ Please forward any questions to [agcmarcus@gmail.com](agcmarcus@gmail.com) . Please refer to the code for this project and others at [https://github.com/Andrew0502](https://github.com/Andrew0502).
