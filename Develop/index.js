@@ -13,9 +13,9 @@ const questions = [
     "How should your project be installed?", //questions[3]
     "How should your project be used?", //questions[4]
     "What license are you using in this project?", //questions[5]
-    "Who contributed to this project?", //questions[6]
+    "How could someone contribute to this project?", //questions[6]
     "What tests could someone run on this project?", //questions[7]
-    "What questions do you have for this project?" // //questions[8]
+    "Please enter your email and GitHub usernames." // //questions[8]
 ];
 
 
@@ -75,7 +75,7 @@ function init() {
           },
           {
             type: "input",
-            name: "Contribution",
+            name: "contribution",
             message: questions[6]
           },
           {

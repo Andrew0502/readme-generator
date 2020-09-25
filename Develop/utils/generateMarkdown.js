@@ -23,18 +23,24 @@ function generateMarkdown(data) {
 
   return `# ${data.title}
 
+  ![MIT License Badge](https://img.shields.io/badge/license-MIT-blue)
+  ![GNU License Badge](https://img.shields.io/badge/license-GNU_GPLv3-blue)
+  ![MIT License Badge](https://img.shields.io/badge/license-ISC-blue)
+  ![MIT License Badge](https://img.shields.io/badge/license-Apache_2.0-blue)
+
+  Delete Badges as appropriate.
 
 ## Description
   ${data.description}
 
 ## Table of Contents
 
-  *[Installation](#Installation)
-  *[Usage](#Usage)
-  *[Licenses](#Licenses)
-  *[Contributions](#Contributions)
-  *[Tests](#Tests)
-  *[Questions](#Questions)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Licenses](#Licenses)
+  * [Contributions](#Contributions)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
 
 ## Installation
   ${data.installation}
@@ -43,7 +49,8 @@ function generateMarkdown(data) {
   ${data.usage}
 
 ## Licenses
-  This project is licensed under the ${data.license} license(s).
+  This project is licensed under the ${data.license} license(s). for more information regarding licensing feel free to visit
+  [choose a license](https://choosealicense.com/)
 
 ## Contributions
   ${data.contribution}
